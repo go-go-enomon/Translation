@@ -13,6 +13,21 @@
 		F1A814C01B32ABEF0079AA97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A814BF1B32ABEF0079AA97 /* Images.xcassets */; };
 		F1A814C31B32ABEF0079AA97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A814C11B32ABEF0079AA97 /* LaunchScreen.xib */; };
 		F1A814CF1B32ABEF0079AA97 /* TranslationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A814CE1B32ABEF0079AA97 /* TranslationTests.swift */; };
+		F1A814DD1B32B5DD0079AA97 /* Kyoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1A814DC1B32B5DD0079AA97 /* Kyoto.jpg */; };
+		F1A814E11B32BEF80079AA97 /* ResultViwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A814E01B32BEF80079AA97 /* ResultViwController.swift */; };
+		F1A814E51B32BF690079AA97 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A814E41B32BF690079AA97 /* TextViewController.swift */; };
+		F1A814E91B32C6680079AA97 /* AppStart.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A814E81B32C6680079AA97 /* AppStart.png */; };
+		F1A814ED1B32C9420079AA97 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A814EC1B32C9420079AA97 /* start.png */; };
+		F1A814EF1B32CFFE0079AA97 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A814EE1B32CFFE0079AA97 /* text.png */; };
+		F1A814F11B32D1BD0079AA97 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A814F01B32D1BD0079AA97 /* ExampleViewController.swift */; };
+		F1A814F31B3300720079AA97 /* Textbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1A814F21B3300720079AA97 /* Textbackground.jpg */; };
+		F1A814F51B3306860079AA97 /* top_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1A814F41B3306860079AA97 /* top_photo.jpg */; };
+		F1A814F71B3306B30079AA97 /* Yasuda-Misako-kimono.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1A814F61B3306B30079AA97 /* Yasuda-Misako-kimono.jpg */; };
+		F1A814F91B3309090079AA97 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A814F81B3309090079AA97 /* title.png */; };
+		F1A814FB1B330BF80079AA97 /* title2.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A814FA1B330BF80079AA97 /* title2.png */; };
+		F1A814FD1B330E840079AA97 /* title3.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A814FC1B330E840079AA97 /* title3.png */; };
+		F1A815001B3311940079AA97 /* title4.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A814FE1B3311940079AA97 /* title4.png */; };
+		F1A815011B3311940079AA97 /* title5.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A814FF1B3311940079AA97 /* title5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +51,21 @@
 		F1A814C81B32ABEF0079AA97 /* TranslationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A814CD1B32ABEF0079AA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A814CE1B32ABEF0079AA97 /* TranslationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationTests.swift; sourceTree = "<group>"; };
+		F1A814DC1B32B5DD0079AA97 /* Kyoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kyoto.jpg; sourceTree = "<group>"; };
+		F1A814E01B32BEF80079AA97 /* ResultViwController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViwController.swift; sourceTree = "<group>"; };
+		F1A814E41B32BF690079AA97 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		F1A814E81B32C6680079AA97 /* AppStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppStart.png; sourceTree = "<group>"; };
+		F1A814EC1B32C9420079AA97 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		F1A814EE1B32CFFE0079AA97 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
+		F1A814F01B32D1BD0079AA97 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		F1A814F21B3300720079AA97 /* Textbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Textbackground.jpg; sourceTree = "<group>"; };
+		F1A814F41B3306860079AA97 /* top_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top_photo.jpg; sourceTree = "<group>"; };
+		F1A814F61B3306B30079AA97 /* Yasuda-Misako-kimono.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Yasuda-Misako-kimono.jpg"; sourceTree = "<group>"; };
+		F1A814F81B3309090079AA97 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		F1A814FA1B330BF80079AA97 /* title2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title2.png; sourceTree = "<group>"; };
+		F1A814FC1B330E840079AA97 /* title3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title3.png; sourceTree = "<group>"; };
+		F1A814FE1B3311940079AA97 /* title4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title4.png; sourceTree = "<group>"; };
+		F1A814FF1B3311940079AA97 /* title5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +107,23 @@
 		F1A814B51B32ABEF0079AA97 /* Translation */ = {
 			isa = PBXGroup;
 			children = (
+				F1A814FE1B3311940079AA97 /* title4.png */,
+				F1A814FF1B3311940079AA97 /* title5.png */,
+				F1A814FC1B330E840079AA97 /* title3.png */,
+				F1A814FA1B330BF80079AA97 /* title2.png */,
+				F1A814F81B3309090079AA97 /* title.png */,
+				F1A814F61B3306B30079AA97 /* Yasuda-Misako-kimono.jpg */,
+				F1A814F41B3306860079AA97 /* top_photo.jpg */,
+				F1A814F21B3300720079AA97 /* Textbackground.jpg */,
+				F1A814EE1B32CFFE0079AA97 /* text.png */,
+				F1A814EC1B32C9420079AA97 /* start.png */,
+				F1A814E81B32C6680079AA97 /* AppStart.png */,
+				F1A814DC1B32B5DD0079AA97 /* Kyoto.jpg */,
 				F1A814B81B32ABEF0079AA97 /* AppDelegate.swift */,
 				F1A814BA1B32ABEF0079AA97 /* ViewController.swift */,
+				F1A814E41B32BF690079AA97 /* TextViewController.swift */,
+				F1A814E01B32BEF80079AA97 /* ResultViwController.swift */,
+				F1A814F01B32D1BD0079AA97 /* ExampleViewController.swift */,
 				F1A814BC1B32ABEF0079AA97 /* Main.storyboard */,
 				F1A814BF1B32ABEF0079AA97 /* Images.xcassets */,
 				F1A814C11B32ABEF0079AA97 /* LaunchScreen.xib */,
@@ -193,8 +238,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A814BE1B32ABEF0079AA97 /* Main.storyboard in Resources */,
+				F1A814E91B32C6680079AA97 /* AppStart.png in Resources */,
 				F1A814C31B32ABEF0079AA97 /* LaunchScreen.xib in Resources */,
+				F1A815011B3311940079AA97 /* title5.png in Resources */,
+				F1A814DD1B32B5DD0079AA97 /* Kyoto.jpg in Resources */,
+				F1A814EF1B32CFFE0079AA97 /* text.png in Resources */,
+				F1A814FD1B330E840079AA97 /* title3.png in Resources */,
+				F1A814ED1B32C9420079AA97 /* start.png in Resources */,
+				F1A814F31B3300720079AA97 /* Textbackground.jpg in Resources */,
+				F1A814F71B3306B30079AA97 /* Yasuda-Misako-kimono.jpg in Resources */,
+				F1A815001B3311940079AA97 /* title4.png in Resources */,
 				F1A814C01B32ABEF0079AA97 /* Images.xcassets in Resources */,
+				F1A814FB1B330BF80079AA97 /* title2.png in Resources */,
+				F1A814F51B3306860079AA97 /* top_photo.jpg in Resources */,
+				F1A814F91B3309090079AA97 /* title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A814BB1B32ABEF0079AA97 /* ViewController.swift in Sources */,
+				F1A814E11B32BEF80079AA97 /* ResultViwController.swift in Sources */,
 				F1A814B91B32ABEF0079AA97 /* AppDelegate.swift in Sources */,
+				F1A814E51B32BF690079AA97 /* TextViewController.swift in Sources */,
+				F1A814F11B32D1BD0079AA97 /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
