@@ -56,24 +56,26 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Textbackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wUv-jC-mnc">
                                 <rect key="frame" x="0.0" y="0.0" width="319" height="568"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="btJ-LZ-pdl">
-                                <rect key="frame" x="-190" y="0.0" width="700" height="451"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="top_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Mmy-4X-tka">
                                 <rect key="frame" x="-39" y="71" width="392" height="300"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ここに標準語を入力してください" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I6Q-se-cyB">
-                                <rect key="frame" x="31" y="400" width="261" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
-                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                                <connections>
-                                    <action selector="array" destination="oXW-4Q-0Ja" eventType="touchUpInside" id="Jq3-nV-fsd"/>
-                                </connections>
-                            </textField>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="btJ-LZ-pdl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMC-qH-xt7">
+                                <rect key="frame" x="0.0" y="1" width="320" height="568"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ここに標準語を入力してください" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I6Q-se-cyB">
+                                        <rect key="frame" x="29" y="403" width="261" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    </textField>
+                                </subviews>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQS-Nu-frM">
-                                <rect key="frame" x="82" y="475" width="150" height="50"/>
+                                <rect key="frame" x="85" y="475" width="150" height="50"/>
                                 <state key="normal" title="Button" image="title2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -86,6 +88,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="scvBackGround" destination="wMC-qH-xt7" id="Wfr-sb-hxh"/>
                         <outlet property="text" destination="I6Q-se-cyB" id="sm9-bf-Ior"/>
                     </connections>
                 </viewController>
@@ -141,6 +144,9 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Textbackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gO2-yH-isf">
                                 <rect key="frame" x="0.0" y="0.0" width="319" height="568"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="sp6-nC-tFj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Yasuda-Misako-kimono.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bAt-M1-8kQ">
                                 <rect key="frame" x="0.0" y="82" width="326" height="246"/>
                             </imageView>
@@ -169,10 +175,7 @@
                                     <segue destination="h2m-b6-GA9" kind="show" id="Jvg-IZ-jP3"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="kMd-cR-v4r">
-                                <rect key="frame" x="-190" y="0.0" width="700" height="451"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bs-gB-HtW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bs-gB-HtW">
                                 <rect key="frame" x="90" y="404" width="168" height="21"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -206,8 +209,8 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="Textbackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-0E-Ozi">
                                 <rect key="frame" x="0.0" y="0.0" width="319" height="568"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yd9-VD-D7E">
-                                <rect key="frame" x="-190" y="0.0" width="700" height="451"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hes-ew-y3M">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="標準語" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h92-cH-Uyo">
                                 <rect key="frame" x="16" y="76" width="106" height="55"/>
@@ -267,7 +270,7 @@
         <image name="Yasuda-Misako-kimono.jpg" width="380" height="350"/>
         <image name="start.png" width="709" height="992"/>
         <image name="text.png" width="709" height="992"/>
-        <image name="title.png" width="709" height="992"/>
+        <image name="title.png" width="709" height="121"/>
         <image name="title2.png" width="329" height="121"/>
         <image name="title3.png" width="351" height="121"/>
         <image name="title4.png" width="214" height="119"/>

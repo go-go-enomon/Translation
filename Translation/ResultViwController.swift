@@ -15,17 +15,16 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var ResultTextlabel: UILabel!
     
     
-    
-    
-    @IBAction func result(){
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        let myDefault = NSUserDefaults.standardUserDefaults()
+        var saveDefault = NSUserDefaults.standardUserDefaults()
         
         // 再度読み出し
-        if let readDict = myDefault.objectForKey("save") as? [String: String] {
-            let readData: String! = readDict["いらっしゃいませ"]
-            let readData2: String! = readDict["だめだ"]
-            let readData3: String! = readDict["ありがとう"]
+        if var readDict = saveDefault.objectForKey("save") as? [String: String] {
+            var readData: String! = readDict["いらっしゃいませ"]
+            var readData2: String! = readDict["だめだ"]
+            var readData3: String! = readDict["ありがとう"]
             ResultTextlabel.text = "\(readData)"
             ResultTextlabel.text = "\(readData2)"
             ResultTextlabel.text = "\(readData3)"
@@ -39,21 +38,11 @@ class ResultViewController: UIViewController {
         */
         
         
-        
+        // 消去
+        //        saveDefault.removeObjectForKey("save")
+        //        saveDefault.synchronize()
     }
     
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-//        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        //AppDelegateのインスタンスを取得
-//        var message = appDelegate.message
-        
-    }
     
     
     
@@ -61,6 +50,16 @@ class ResultViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    //        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    //AppDelegateのインスタンスを取得
+    //        var message = appDelegate.message
+    
+    
     
     
 }
