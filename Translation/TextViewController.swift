@@ -12,10 +12,8 @@ import UIKit
 
 // まず、デリゲートプロトコルを宣言
 class TextViewController: UIViewController , UITextFieldDelegate {
-    
     // テキストフィールドをアウトレット接続して
     @IBOutlet var text: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +23,15 @@ class TextViewController: UIViewController , UITextFieldDelegate {
         //        appDelegate.message = "message"
         //appDelegateの変数を操作
         
-        
         // selfをデリゲートにする
         self.text.delegate = self
         
-        
         // 何も無い状態をチェック
         var myDefault = NSUserDefaults.standardUserDefaults()
-        if var readDict = myDefault.objectForKey("save") as? [String: String] {
-            var readData2 = readDict["だめだ"]!
+        if let readDict = myDefault.objectForKey("save") as? [String: String] {
+            let readData2 = readDict["だめだ"]!
         } else {
-            println("No such Data")
+//            println("No such Data")
         }
         // No such data!
         
@@ -46,8 +42,19 @@ class TextViewController: UIViewController , UITextFieldDelegate {
         saveDefault.setObject(saveData, forKey: "save")
         saveDefault.synchronize()
         
-    }
+//        辞書データが入っているか確認
+//        for (key, val) in saveData {
+//         println("saveData[\(key)]=\(val)")
+//        }
+        
+}
     
+//    textviewに書き込んだ文字列を変数に入れる
+    @IBAction func tapReturnKey(sender: UITextField){
+        var reserchText = NSUserDefaults.standardUserDefaults()
+        reserchText.setObject(sender.text, forKey: "reserch")
+        reserchText.synchronize()
+    }
     
     
     
@@ -86,8 +93,8 @@ class TextViewController: UIViewController , UITextFieldDelegate {
         let txtLimit = txtActiveField.frame.origin.y + txtActiveField.frame.height + 8.0
         let kbdLimit = myBoundSize.height - keyboardScreenEndFrame.size.height
         
-        println("テキストフィールドの下辺:\(txtLimit)")
-        println("キーボードの上辺:\(kbdLimit)")
+//        println("テキストフィールドの下辺:\(txtLimit)")
+//        println("キーボードの上辺:\(kbdLimit)")
         
         if txtLimit >= kbdLimit {
             scvBackGround.contentOffset.y = txtLimit - kbdLimit

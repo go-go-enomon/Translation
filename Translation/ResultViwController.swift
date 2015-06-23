@@ -19,29 +19,51 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         var saveDefault = NSUserDefaults.standardUserDefaults()
+        var reserchText = NSUserDefaults.standardUserDefaults()
         
-        // 再度読み出し
-        if var readDict = saveDefault.objectForKey("save") as? [String: String] {
-            var readData: String! = readDict["いらっしゃいませ"]
-            var readData2: String! = readDict["だめだ"]
-            var readData3: String! = readDict["ありがとう"]
+        var readDict = saveDefault.stringForKey("save")
+        var resultText = saveDefault.stringForKey("reserch")
+        
+        if resultText = readDict["いらっしゃいませ"] {
+            readData = readDict["いらっしゃいませ"]
             ResultTextlabel.text = "\(readData)"
+        } else if resultText = readDict["だめだ"] {
+            readData2 = readDict["だめだ"]
             ResultTextlabel.text = "\(readData2)"
+        } else if resultText = readDict["ありがとう"] {
+            readData3 = readDict["ありがとう"]
             ResultTextlabel.text = "\(readData3)"
         } else {
             ResultTextlabel.text = "No such Data"
         }
-        /*
-        Data of key1 = data
-        Data of key2 = data2
-        Data of key3 = nil
-        */
+        
+    }
+        // 再度読み出し
+        /*if let readDict = saveDefault.objectForKey("save") as? [String: String] && resulttext = reserchText.objectForKey("reserch") as? [String: String] {
+        
+            
+           if  reserchText = readDict["いらっしゃいませ"] {
+                readData: String! = readDict["いらっしゃいませ"]
+                ResultTextlabel.text = "\(readData)"
+            } else if let reserchText = readDict["だめだ"] {
+                readData2: String! = readDict["だめだ"]
+                ResultTextlabel.text = "\(readData2)"
+            } else if let reserchText =
+                readData3: String! = readDict["ありがとう"] {
+                ResultTextlabel.text = "\(readData3)"
+            } else {
+                ResultTextlabel.text = "No such Data"
+            }
+            
+    
+        }
+    }*/
         
         
         // 消去
         //        saveDefault.removeObjectForKey("save")
         //        saveDefault.synchronize()
-    }
+    
     
     
     
