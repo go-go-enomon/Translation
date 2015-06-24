@@ -22,7 +22,10 @@ class ResultViewController: UIViewController {
         var reserchText = NSUserDefaults.standardUserDefaults()
         
         var readDict = saveDefault.stringForKey("save")
-        var resultText = saveDefault.stringForKey("reserch")
+        var resultText = reserchText.stringForKey("reserch")
+        
+        saveDefault.synchronize()
+        reserchText.synchronize()
         
         if resultText = readDict["いらっしゃいませ"] {
             readData = readDict["いらっしゃいませ"]

@@ -80,6 +80,9 @@ class TextViewController: UIViewController , UITextFieldDelegate {
     
     //  selfをデリゲートにしているので、ここにデリゲートメソッドを書く
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        var reserchText = NSUserDefaults.standardUserDefaults()
+        reserchText.setObject(textField.text, forKey: "reserch")
+        reserchText.synchronize()
         self.view.endEditing(true)
         return false
     }
