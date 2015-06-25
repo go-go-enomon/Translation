@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="147"/>
+            <point key="canvasLocation" x="333" y="147"/>
         </scene>
         <!--Text View Controller-->
         <scene sceneID="wBy-y4-Rl1">
@@ -253,7 +253,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WP-iI-wDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086" y="865"/>
+            <point key="canvasLocation" x="730" y="147"/>
         </scene>
     </scenes>
     <resources>
@@ -270,6 +270,6 @@
         <image name="top_photo.jpg" width="803" height="443"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oex-sZ-sCd"/>
+        <segue reference="N3G-Ex-q9H"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,12 +15,12 @@ import UIKit
 class TextViewController: UIViewController , UITextFieldDelegate {
     
     // テキストフィールドをアウトレット接続して
-    @IBOutlet var text: UITextField!
+    @IBOutlet var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // selfをデリゲートにする
-        self.text.delegate = self
+        self.textField.delegate = self
      }
     
     override func didReceiveMemoryWarning() {
@@ -28,12 +28,18 @@ class TextViewController: UIViewController , UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // textviewに書き込んだ文字列を変数に入れる======================================
+    @IBAction func tapReturnKey(sender: UITextField){
+        var reserchText = NSUserDefaults.standardUserDefaults()
+        reserchText.setObject(textField, forKey: "reserch")
+        reserchText.synchronize()
+    }
+
     
     
-    /// 画面遷移時に渡す為の値
-    var _param:String = "segue OK"
+    // segueによる受け渡し=======================================================
     
-    @IBOutlet var myButton : UIButton!
+    
     
     /**
     画面遷移ボタン
@@ -43,33 +49,19 @@ class TextViewController: UIViewController , UITextFieldDelegate {
     /**
     画面遷移時に値を遷移先に渡す
     */
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segue") {
             // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
             var resultView : ResultViewController = segue.destinationViewController as! ResultViewController
             // resultView（バンドルされた変数）に受け取り用の変数を引数とし_paramを渡す（_paramには渡したい値）
             // この時ResultViewControllerにて受け取る同型の変数を用意しておかないとエラーになる
-            resultView.second = _param
+            resultView.second = self.textField.text
         }
     }
     
 
-    //    textviewに書き込んだ文字列を変数に入れる
-    @IBAction func tapReturnKey(sender: UITextField){
-        var reserchText = NSUserDefaults.standardUserDefaults()
-        reserchText.setObject(sender.text, forKey: "reserch")
-        reserchText.synchronize()
-    }
     
-    
-    
-    
-    
-    
-    
-    
-
-    
+    // キーボード表示のコード=======================================================
     @IBOutlet weak var scvBackGround: UIScrollView!
     
     var txtActiveField = UITextField()

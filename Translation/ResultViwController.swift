@@ -14,20 +14,21 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var ResultTextlabel: UILabel!
     
-    
     /// ラベルをアウトプット接続
     @IBOutlet weak var myLabel: UILabel!
     
     /// 遷移時の受け取り用の変数
-    var second:String = ""
+    var second:String = "init second"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // ラベルに受け取った遷移用の変数を渡す
-        myLabel.text = second
+        self.myLabel.text = self.second
 
         
+        
+        // NSUserDefaultsを使った辞書データの格納=======================================================
         // 何も無い状態をチェック
         //        var myDefault = NSUserDefaults.standardUserDefaults()
         //        if let readDict = myDefault.objectForKey("save") as? [String: String] {
