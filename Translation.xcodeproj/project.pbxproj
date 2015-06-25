@@ -28,7 +28,6 @@
 		F1A8150D1B344D7D0079AA97 /* title5.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A8150B1B344D7D0079AA97 /* title5.png */; };
 		F1A8150F1B344F360079AA97 /* top_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1A8150E1B344F360079AA97 /* top_photo.jpg */; };
 		F1A86EE01B39A88B00970BA7 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = F1A86EDF1B39A88B00970BA7 /* title.png */; };
-		F1B1EEF11B3540E800953808 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1EEF01B3540E800953808 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		F1A8150B1B344D7D0079AA97 /* title5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title5.png; sourceTree = "<group>"; };
 		F1A8150E1B344F360079AA97 /* top_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top_photo.jpg; sourceTree = "<group>"; };
 		F1A86EDF1B39A88B00970BA7 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
-		F1B1EEF01B3540E800953808 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +125,6 @@
 				F1A814E01B32BEF80079AA97 /* ResultViwController.swift */,
 				F1A814F01B32D1BD0079AA97 /* ExampleViewController.swift */,
 				F1A814BC1B32ABEF0079AA97 /* Main.storyboard */,
-				F1B1EEF01B3540E800953808 /* SecondViewController.swift */,
 				F1A814BF1B32ABEF0079AA97 /* Images.xcassets */,
 				F1A814C11B32ABEF0079AA97 /* LaunchScreen.xib */,
 				F1A814B61B32ABEF0079AA97 /* Supporting Files */,
@@ -276,7 +273,6 @@
 				F1A814E11B32BEF80079AA97 /* ResultViwController.swift in Sources */,
 				F1A814B91B32ABEF0079AA97 /* AppDelegate.swift in Sources */,
 				F1A814E51B32BF690079AA97 /* TextViewController.swift in Sources */,
-				F1B1EEF11B3540E800953808 /* SecondViewController.swift in Sources */,
 				F1A814F11B32D1BD0079AA97 /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

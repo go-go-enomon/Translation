@@ -11,14 +11,11 @@ import Foundation
 import UIKit
 
 class ResultViewController: UIViewController {
-    
-    @IBOutlet weak var ResultTextlabel: UILabel!
-    
     /// ラベルをアウトプット接続
     @IBOutlet weak var myLabel: UILabel!
-    
     /// 遷移時の受け取り用の変数
     var second:String = "init second"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,16 +42,16 @@ class ResultViewController: UIViewController {
         var readData2 = saveData["だめだ"]
         var readData3 = saveData["ありがとう"]
         
-        var reserchText = NSUserDefaults.standardUserDefaults()
-//        reserchText.setObject(sender.text, forKey: "reserch")
-        reserchText.synchronize()
+//        var reserchText = NSUserDefaults.standardUserDefaults()
+////        reserchText.setObject(sender.text, forKey: "reserch")
+//        reserchText.synchronize()
         
-        if readData == reserchText {
-            ResultTextlabel.text = "\(readData)"
-        } else if readData2 == reserchText {
-            ResultTextlabel.text = "\(readData2)"
-        } else if readData3 == reserchText {
-            ResultTextlabel.text = "\(readData3)"
+        if saveData["いらっしゃいませ"] == myLabel {
+            myLabel.text = "\(readData)"
+        } else if saveData["だめだ"] == myLabel {
+            myLabel.text = "\(readData2)"
+        } else if saveData["ありがとう"] == myLabel {
+            myLabel.text = "\(readData3)"
         }
         
     }

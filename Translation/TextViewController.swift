@@ -23,24 +23,7 @@ class TextViewController: UIViewController , UITextFieldDelegate {
         self.textField.delegate = self
      }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // textviewに書き込んだ文字列を変数に入れる======================================
-    @IBAction func tapReturnKey(sender: UITextField){
-        var reserchText = NSUserDefaults.standardUserDefaults()
-        reserchText.setObject(textField, forKey: "reserch")
-        reserchText.synchronize()
-    }
-
-    
-    
     // segueによる受け渡し=======================================================
-    
-    
-    
     /**
     画面遷移ボタン
     */@IBAction func myButton(sender: AnyObject) {
@@ -58,6 +41,23 @@ class TextViewController: UIViewController , UITextFieldDelegate {
             resultView.second = self.textField.text
         }
     }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+//    // textviewに書き込んだ文字列を変数に入れる======================================
+//    @IBAction func tapReturnKey(sender: UITextField){
+//        var reserchText = NSUserDefaults.standardUserDefaults()
+//        reserchText.setObject(textField, forKey: "reserch")
+//        reserchText.synchronize()
+//    }
+
+    
+    
+
     
 
     

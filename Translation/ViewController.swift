@@ -9,9 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBAction func textfield(){
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
