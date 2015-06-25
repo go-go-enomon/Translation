@@ -6,11 +6,15 @@
 //  Copyright (c) 2015年 榎本拓馬. All rights reserved.
 //
 
+
 import Foundation
 
 import UIKit
 
 class ResultViewController: UIViewController {
+    //
+    //    @IBOutlet weak var ResultTextlabel: UILabel!
+    
     /// ラベルをアウトプット接続
     @IBOutlet weak var myLabel: UILabel!
     /// 遷移時の受け取り用の変数
@@ -21,8 +25,8 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         // ラベルに受け取った遷移用の変数を渡す
-        self.myLabel.text = self.second
-
+        //        self.myLabel.text = self.second
+        
         
         
         // NSUserDefaultsを使った辞書データの格納=======================================================
@@ -42,17 +46,26 @@ class ResultViewController: UIViewController {
         var readData2 = saveData["だめだ"]
         var readData3 = saveData["ありがとう"]
         
-//        var reserchText = NSUserDefaults.standardUserDefaults()
-////        reserchText.setObject(sender.text, forKey: "reserch")
-//        reserchText.synchronize()
+        //        var reserchText = NSUserDefaults.standardUserDefaults()
+        ////        reserchText.setObject(sender.text, forKey: "reserch")
+        //        reserchText.synchronize()
         
-        if saveData["いらっしゃいませ"] == myLabel {
-            myLabel.text = "\(readData)"
-        } else if saveData["だめだ"] == myLabel {
-            myLabel.text = "\(readData2)"
-        } else if saveData["ありがとう"] == myLabel {
-            myLabel.text = "\(readData3)"
+        var keyArray = Array(saveData.keys)
+        
+        for hyoujyunWord in keyArray {
+            if hyoujyunWord == self.second {
+                self.myLabel.text = saveData[hyoujyunWord]
+            }
         }
+        
+        
+        //        if readData == self.second {
+        //            myLabel.text = "\(readData)"
+        //        } else if readData2 == self.second {
+        //            myLabel.text = "\(readData2)"
+        //        } else if readData3 == self.second {
+        //            myLabel.text = "\(readData3)"
+        //        }
         
     }
     
@@ -63,70 +76,70 @@ class ResultViewController: UIViewController {
     }
     
     
-        
-//        var saveDefault = NSUserDefaults.standardUserDefaults()
-//        
-//        if let readDict = saveDefault.objectForKey("save") as? [String: String] {
-//            let readData = readDict["いらっしゃいませ"]!
-//            let readData2 = readDict["だめだ"]!
-//            let readData3 = readDict["ありがとう"]!
-//        }
-//        
-//        //        saveDefault.setObject(saveData, forKey: "save")
-//        saveDefault.synchronize()
-//        
-//        //        辞書データが入っているか確認
-//        //        for (key, val) in saveData {
-//        //         println("saveData[\(key)]=\(val)")
-//        //        }
-//        
-//        
-//        
-//        
-////        var saveDefault = NSUserDefaults.standardUserDefaults()
-//
-//    
-//        var resultText = reserchText.objectForKey("reserch")
-//        reserchText.synchronize()
-//        
-//        if resultText = readData {
-//            ResultTextlabel.text = "\(readData)"
-//        } else if resultText = readDict["だめだ"] {
-////            readData2 = readDict["だめだ"]
-//            ResultTextlabel.text = "\(readData2)"
-//        } else if resultText = readDict["ありがとう"] {
-////            readData3 = readDict["ありがとう"]
-//            ResultTextlabel.text = "\(readData3)"
-//        } else {
-//            ResultTextlabel.text = "No such Data"
-//        }
-//////
-////    }
-//        // 再度読み出し
-//        /*if let readDict = saveDefault.objectForKey("save") as? [String: String] && resulttext = reserchText.objectForKey("reserch") as? [String: String] {
-//        
-//            
-//           if  reserchText = readDict["いらっしゃいませ"] {
-//                readData: String! = readDict["いらっしゃいませ"]
-//                ResultTextlabel.text = "\(readData)"
-//            } else if let reserchText = readDict["だめだ"] {
-//                readData2: String! = readDict["だめだ"]
-//                ResultTextlabel.text = "\(readData2)"
-//            } else if let reserchText =
-//                readData3: String! = readDict["ありがとう"] {
-//                ResultTextlabel.text = "\(readData3)"
-//            } else {
-//                ResultTextlabel.text = "No such Data"
-//            }
-//            
-//    
-//        }
-//    }*/
-//        
-//        
-//        // 消去
-//        //        saveDefault.removeObjectForKey("save")
-//        //        saveDefault.synchronize()
+    
+    //        var saveDefault = NSUserDefaults.standardUserDefaults()
+    //
+    //        if let readDict = saveDefault.objectForKey("save") as? [String: String] {
+    //            let readData = readDict["いらっしゃいませ"]!
+    //            let readData2 = readDict["だめだ"]!
+    //            let readData3 = readDict["ありがとう"]!
+    //        }
+    //
+    //        //        saveDefault.setObject(saveData, forKey: "save")
+    //        saveDefault.synchronize()
+    //
+    //        //        辞書データが入っているか確認
+    //        //        for (key, val) in saveData {
+    //        //         println("saveData[\(key)]=\(val)")
+    //        //        }
+    //
+    //
+    //
+    //
+    ////        var saveDefault = NSUserDefaults.standardUserDefaults()
+    //
+    //
+    //        var resultText = reserchText.objectForKey("reserch")
+    //        reserchText.synchronize()
+    //
+    //        if resultText = readData {
+    //            ResultTextlabel.text = "\(readData)"
+    //        } else if resultText = readDict["だめだ"] {
+    ////            readData2 = readDict["だめだ"]
+    //            ResultTextlabel.text = "\(readData2)"
+    //        } else if resultText = readDict["ありがとう"] {
+    ////            readData3 = readDict["ありがとう"]
+    //            ResultTextlabel.text = "\(readData3)"
+    //        } else {
+    //            ResultTextlabel.text = "No such Data"
+    //        }
+    //////
+    ////    }
+    //        // 再度読み出し
+    //        /*if let readDict = saveDefault.objectForKey("save") as? [String: String] && resulttext = reserchText.objectForKey("reserch") as? [String: String] {
+    //
+    //
+    //           if  reserchText = readDict["いらっしゃいませ"] {
+    //                readData: String! = readDict["いらっしゃいませ"]
+    //                ResultTextlabel.text = "\(readData)"
+    //            } else if let reserchText = readDict["だめだ"] {
+    //                readData2: String! = readDict["だめだ"]
+    //                ResultTextlabel.text = "\(readData2)"
+    //            } else if let reserchText =
+    //                readData3: String! = readDict["ありがとう"] {
+    //                ResultTextlabel.text = "\(readData3)"
+    //            } else {
+    //                ResultTextlabel.text = "No such Data"
+    //            }
+    //
+    //
+    //        }
+    //    }*/
+    //
+    //
+    //        // 消去
+    //        //        saveDefault.removeObjectForKey("save")
+    //        //        saveDefault.synchronize()
     
     
     // Do any additional setup after loading the view, typically from a nib.
