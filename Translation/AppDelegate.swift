@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var message: String?
+//    var message: String?
     var window: UIWindow?
     
     

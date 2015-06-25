@@ -1,3 +1,4 @@
+
 //
 //  TextViewController.swift
 //  Translation
@@ -12,51 +13,15 @@ import UIKit
 
 // まず、デリゲートプロトコルを宣言
 class TextViewController: UIViewController , UITextFieldDelegate {
+    
     // テキストフィールドをアウトレット接続して
     @IBOutlet var text: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        //AppDelegateのインスタンスを取得
-        //        appDelegate.message = "message"
-        //appDelegateの変数を操作
-        
         // selfをデリゲートにする
         self.text.delegate = self
-        
-        // 何も無い状態をチェック
-        var myDefault = NSUserDefaults.standardUserDefaults()
-        if let readDict = myDefault.objectForKey("save") as? [String: String] {
-            let readData2 = readDict["だめだ"]!
-        } else {
-//            println("No such Data")
-        }
-        // No such data!
-        
-        
-        // データを用意して保存
-        var saveData = ["いらっしゃいませ"/*key1*/: "おいでやす"/*data1*/, "だめだ": "あかん", "ありがとう": "おおきに"]
-        var saveDefault = NSUserDefaults.standardUserDefaults()
-        saveDefault.setObject(saveData, forKey: "save")
-        saveDefault.synchronize()
-        
-//        辞書データが入っているか確認
-//        for (key, val) in saveData {
-//         println("saveData[\(key)]=\(val)")
-//        }
-        
-}
-    
-//    textviewに書き込んだ文字列を変数に入れる
-    @IBAction func tapReturnKey(sender: UITextField){
-        var reserchText = NSUserDefaults.standardUserDefaults()
-        reserchText.setObject(sender.text, forKey: "reserch")
-        reserchText.synchronize()
-    }
-    
-    
+     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -65,9 +30,45 @@ class TextViewController: UIViewController , UITextFieldDelegate {
     
     
     
+    /// 画面遷移時に渡す為の値
+    var _param:String = "segue OK"
+    
+    @IBOutlet var myButton : UIButton!
+    
+    /**
+    画面遷移ボタン
+    */@IBAction func myButton(sender: AnyObject) {
+        performSegueWithIdentifier("segue",sender: nil)
+    }
+    /**
+    画面遷移時に値を遷移先に渡す
+    */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "segue") {
+            // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
+            var resultView : ResultViewController = segue.destinationViewController as ResultiewController
+            // resultView（バンドルされた変数）に受け取り用の変数を引数とし_paramを渡す（_paramには渡したい値）
+            // この時ResultViewControllerにて受け取る同型の変数を用意しておかないとエラーになる
+            textView.second = _param
+        }
+    }
+    
+
+    //    textviewに書き込んだ文字列を変数に入れる
+    @IBAction func tapReturnKey(sender: UITextField){
+        var reserchText = NSUserDefaults.standardUserDefaults()
+        reserchText.setObject(sender.text, forKey: "reserch")
+        reserchText.synchronize()
+    }
     
     
     
+    
+    
+    
+    
+    
+
     
     @IBOutlet weak var scvBackGround: UIScrollView!
     
@@ -123,9 +124,19 @@ class TextViewController: UIViewController , UITextFieldDelegate {
         notificationCenter.removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
-    
-    
-    
-    
-    
+
+
+
 }
+
+
+
+
+
+
+
+
+//        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+// AppDelegateのインスタンスを取得
+//        appDelegate.message = "message"
+// AppDelegateの変数を操作
