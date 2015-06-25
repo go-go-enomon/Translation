@@ -46,10 +46,10 @@ class TextViewController: UIViewController , UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "segue") {
             // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
-            var resultView : ResultViewController = segue.destinationViewController as ResultiewController
+            var resultView : ResultViewController = segue.destinationViewController as! ResultViewController
             // resultView（バンドルされた変数）に受け取り用の変数を引数とし_paramを渡す（_paramには渡したい値）
             // この時ResultViewControllerにて受け取る同型の変数を用意しておかないとエラーになる
-            textView.second = _param
+            resultView.second = _param
         }
     }
     

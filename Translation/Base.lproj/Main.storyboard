@@ -92,6 +92,7 @@
                     <navigationItem key="navigationItem" id="bce-My-Z3C"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="myButton" destination="dQS-Nu-frM" id="8B4-J4-Pha"/>
                         <outlet property="scvBackGround" destination="wMC-qH-xt7" id="Wfr-sb-hxh"/>
                         <outlet property="text" destination="I6Q-se-cyB" id="sm9-bf-Ior"/>
                     </connections>
@@ -160,6 +161,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="ResultTextlabel" destination="3bs-gB-HtW" id="i0o-S4-xqa"/>
+                        <outlet property="myLabel" destination="3bs-gB-HtW" id="hIB-Ie-K8i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNo-5a-FAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
