@@ -48,19 +48,6 @@ class TextViewController: UIViewController , UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-//    // textviewに書き込んだ文字列を変数に入れる======================================
-//    @IBAction func tapReturnKey(sender: UITextField){
-//        var reserchText = NSUserDefaults.standardUserDefaults()
-//        reserchText.setObject(textField, forKey: "reserch")
-//        reserchText.synchronize()
-//    }
-
-    
-    
-
-    
-
-    
     // キーボード表示のコード=======================================================
     @IBOutlet weak var scvBackGround: UIScrollView!
     
@@ -122,10 +109,12 @@ class TextViewController: UIViewController , UITextFieldDelegate {
 }
 
 
-
-
-
-
+//    // textviewに書き込んだ文字列を変数に入れる======================================
+//    @IBAction func tapReturnKey(sender: UITextField){
+//        var reserchText = NSUserDefaults.standardUserDefaults()
+//        reserchText.setObject(textField, forKey: "reserch")
+//        reserchText.synchronize()
+//    }
 
 
 //        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

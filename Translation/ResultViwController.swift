@@ -11,24 +11,22 @@ import Foundation
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController , UITextViewDelegate {
     //
     //    @IBOutlet weak var ResultTextlabel: UILabel!
     
     /// ラベルをアウトプット接続
     @IBOutlet weak var myLabel: UILabel!
     /// 遷移時の受け取り用の変数
-    var second:String = "init second"
+    var second: String!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // ラベルに受け取った遷移用の変数を渡す
-        //        self.myLabel.text = self.second
-        
-        
-        
+        // selfをデリゲートにする
+//        self.myLabel.delegate = self
+
         // NSUserDefaultsを使った辞書データの格納=======================================================
         // 何も無い状態をチェック
         //        var myDefault = NSUserDefaults.standardUserDefaults()
@@ -40,34 +38,32 @@ class ResultViewController: UIViewController {
         // No such data!
         
         // データを用意して保存
-        var saveData = ["いらっしゃいませ"/*key1*/: "おいでやす"/*data1*/, "だめだ": "あかん", "ありがとう": "おおきに"]
-        
-        var readData = saveData["いらっしゃいませ"]
-        var readData2 = saveData["だめだ"]
-        var readData3 = saveData["ありがとう"]
-        
-        //        var reserchText = NSUserDefaults.standardUserDefaults()
-        ////        reserchText.setObject(sender.text, forKey: "reserch")
-        //        reserchText.synchronize()
-        
+        var saveData = ["いらっしゃいませ"/*key1*/: "おいでやす"/*data1*/, "だめだ": "あかん", "ありがとう": "おおきに", "ごはん": "まんま", "苦しい": "しんどい"]
+        //saveDataの標準語だけを抜き出してkeyArrayに格納
         var keyArray = Array(saveData.keys)
-        
+        //keyArrayの要素をhyoujyunWordに入れてfor文を回す
         for hyoujyunWord in keyArray {
             if hyoujyunWord == self.second {
                 self.myLabel.text = saveData[hyoujyunWord]
             }
         }
-        
-        
-        //        if readData == self.second {
-        //            myLabel.text = "\(readData)"
-        //        } else if readData2 == self.second {
-        //            myLabel.text = "\(readData2)"
-        //        } else if readData3 == self.second {
-        //            myLabel.text = "\(readData3)"
-        //        }
-        
     }
+    
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "segue2") {
+            // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
+            var exampleView : ExampleViewController = segue.destinationViewController as! ExampleViewController
+            // ExampleView（バンドルされた変数）に受け取り用の変数を引数とし_paramを渡す（_paramには渡したい値）
+            // この時ResultViewControllerにて受け取る同型の変数を用意しておかないとエラーになる
+            exampleView.example = self.myLabel.text
+            
+        }
+    }
+
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -75,77 +71,6 @@ class ResultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    //        var saveDefault = NSUserDefaults.standardUserDefaults()
-    //
-    //        if let readDict = saveDefault.objectForKey("save") as? [String: String] {
-    //            let readData = readDict["いらっしゃいませ"]!
-    //            let readData2 = readDict["だめだ"]!
-    //            let readData3 = readDict["ありがとう"]!
-    //        }
-    //
-    //        //        saveDefault.setObject(saveData, forKey: "save")
-    //        saveDefault.synchronize()
-    //
-    //        //        辞書データが入っているか確認
-    //        //        for (key, val) in saveData {
-    //        //         println("saveData[\(key)]=\(val)")
-    //        //        }
-    //
-    //
-    //
-    //
-    ////        var saveDefault = NSUserDefaults.standardUserDefaults()
-    //
-    //
-    //        var resultText = reserchText.objectForKey("reserch")
-    //        reserchText.synchronize()
-    //
-    //        if resultText = readData {
-    //            ResultTextlabel.text = "\(readData)"
-    //        } else if resultText = readDict["だめだ"] {
-    ////            readData2 = readDict["だめだ"]
-    //            ResultTextlabel.text = "\(readData2)"
-    //        } else if resultText = readDict["ありがとう"] {
-    ////            readData3 = readDict["ありがとう"]
-    //            ResultTextlabel.text = "\(readData3)"
-    //        } else {
-    //            ResultTextlabel.text = "No such Data"
-    //        }
-    //////
-    ////    }
-    //        // 再度読み出し
-    //        /*if let readDict = saveDefault.objectForKey("save") as? [String: String] && resulttext = reserchText.objectForKey("reserch") as? [String: String] {
-    //
-    //
-    //           if  reserchText = readDict["いらっしゃいませ"] {
-    //                readData: String! = readDict["いらっしゃいませ"]
-    //                ResultTextlabel.text = "\(readData)"
-    //            } else if let reserchText = readDict["だめだ"] {
-    //                readData2: String! = readDict["だめだ"]
-    //                ResultTextlabel.text = "\(readData2)"
-    //            } else if let reserchText =
-    //                readData3: String! = readDict["ありがとう"] {
-    //                ResultTextlabel.text = "\(readData3)"
-    //            } else {
-    //                ResultTextlabel.text = "No such Data"
-    //            }
-    //
-    //
-    //        }
-    //    }*/
-    //
-    //
-    //        // 消去
-    //        //        saveDefault.removeObjectForKey("save")
-    //        //        saveDefault.synchronize()
-    
-    
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    //        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    //AppDelegateのインスタンスを取得
-    //        var message = appDelegate.message
+
     
 }
