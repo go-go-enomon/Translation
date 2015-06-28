@@ -23,6 +23,28 @@ class TextViewController: UIViewController , UITextFieldDelegate {
         self.textField.delegate = self
      }
     
+    
+    // PickerViewによる値の受け渡し（お試し中）------------------------------------------------------
+    
+    uiPicker = UIPickerView()
+    // サイズを指定する
+    uiPicker.frame = CGRectMake(0,0,60, 100.0)
+    uiPicker.layer.position = CGPoint(x: i/2 + 40,y: j/3)
+    // Delegateを設定する.
+    uiPicker.delegate = self
+    uiPicker.tag = 0
+    self.view.addSubview(uiPicker)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // segueによる受け渡し=======================================================
     /**
     画面遷移ボタン
