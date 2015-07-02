@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F13987CA1B45594C00FB5E27 /* おいでやす.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13987C91B45594C00FB5E27 /* おいでやす.mp3 */; };
 		F13987CC1B4559A200FB5E27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13987CB1B4559A200FB5E27 /* AVFoundation.framework */; };
+		F13987CF1B45EAC100FB5E27 /* おいでやす.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13987CD1B45EAC100FB5E27 /* おいでやす.mp3 */; };
+		F13987D01B45EAC100FB5E27 /* しんどい.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13987CE1B45EAC100FB5E27 /* しんどい.mp3 */; };
+		F13987D81B45F2F300FB5E27 /* title6.png in Resources */ = {isa = PBXBuildFile; fileRef = F13987D71B45F2F300FB5E27 /* title6.png */; };
+		F13987DA1B45F62500FB5E27 /* あかん.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13987D91B45F62500FB5E27 /* あかん.mp3 */; };
 		F1A814B91B32ABEF0079AA97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A814B81B32ABEF0079AA97 /* AppDelegate.swift */; };
 		F1A814BB1B32ABEF0079AA97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A814BA1B32ABEF0079AA97 /* ViewController.swift */; };
 		F1A814BE1B32ABEF0079AA97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A814BC1B32ABEF0079AA97 /* Main.storyboard */; };
@@ -43,8 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F13987C91B45594C00FB5E27 /* おいでやす.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "おいでやす.mp3"; sourceTree = "<group>"; };
 		F13987CB1B4559A200FB5E27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F13987CD1B45EAC100FB5E27 /* おいでやす.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "おいでやす.mp3"; path = "../../おいでやす.mp3"; sourceTree = "<group>"; };
+		F13987CE1B45EAC100FB5E27 /* しんどい.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "しんどい.mp3"; path = "../../しんどい.mp3"; sourceTree = "<group>"; };
+		F13987D71B45F2F300FB5E27 /* title6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title6.png; sourceTree = "<group>"; };
+		F13987D91B45F62500FB5E27 /* あかん.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "あかん.mp3"; sourceTree = "<group>"; };
 		F1A814B31B32ABEF0079AA97 /* Translation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A814B71B32ABEF0079AA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A814B81B32ABEF0079AA97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +100,9 @@
 		F13987C81B45593000FB5E27 /* voice */ = {
 			isa = PBXGroup;
 			children = (
-				F13987C91B45594C00FB5E27 /* おいでやす.mp3 */,
+				F13987D91B45F62500FB5E27 /* あかん.mp3 */,
+				F13987CD1B45EAC100FB5E27 /* おいでやす.mp3 */,
+				F13987CE1B45EAC100FB5E27 /* しんどい.mp3 */,
 			);
 			name = voice;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 		F1A814B51B32ABEF0079AA97 /* Translation */ = {
 			isa = PBXGroup;
 			children = (
+				F13987D71B45F2F300FB5E27 /* title6.png */,
 				F1A86EDF1B39A88B00970BA7 /* title.png */,
 				F1A815061B344B620079AA97 /* title2.png */,
 				F1A815081B344C4C0079AA97 /* title3.png */,
@@ -254,20 +263,23 @@
 			files = (
 				F1A814BE1B32ABEF0079AA97 /* Main.storyboard in Resources */,
 				F1A814E91B32C6680079AA97 /* AppStart.png in Resources */,
-				F13987CA1B45594C00FB5E27 /* おいでやす.mp3 in Resources */,
 				F1A814C31B32ABEF0079AA97 /* LaunchScreen.xib in Resources */,
 				F1A8150D1B344D7D0079AA97 /* title5.png in Resources */,
 				F1A815071B344B620079AA97 /* title2.png in Resources */,
+				F13987DA1B45F62500FB5E27 /* あかん.mp3 in Resources */,
 				F1A814DD1B32B5DD0079AA97 /* Kyoto.jpg in Resources */,
 				F1A814EF1B32CFFE0079AA97 /* text.png in Resources */,
 				F1A814ED1B32C9420079AA97 /* start.png in Resources */,
 				F1A8150F1B344F360079AA97 /* top_photo.jpg in Resources */,
+				F13987D81B45F2F300FB5E27 /* title6.png in Resources */,
 				F1A815091B344C4C0079AA97 /* title3.png in Resources */,
 				F1A814F31B3300720079AA97 /* Textbackground.jpg in Resources */,
 				F1A8150C1B344D7D0079AA97 /* title4.png in Resources */,
 				F1A814F71B3306B30079AA97 /* Yasuda-Misako-kimono.jpg in Resources */,
 				F1A814C01B32ABEF0079AA97 /* Images.xcassets in Resources */,
 				F1A86EE01B39A88B00970BA7 /* title.png in Resources */,
+				F13987D01B45EAC100FB5E27 /* しんどい.mp3 in Resources */,
+				F13987CF1B45EAC100FB5E27 /* おいでやす.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

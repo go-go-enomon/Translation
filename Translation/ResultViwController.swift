@@ -12,30 +12,13 @@ import Foundation
 import UIKit
 
 class ResultViewController: UIViewController , UITextViewDelegate {
-    //
-    //    @IBOutlet weak var ResultTextlabel: UILabel!
-    
-    /// ラベルをアウトプット接続
+    // ラベルをアウトプット接続
     @IBOutlet weak var myLabel: UILabel!
-    /// 遷移時の受け取り用の変数
+    // 遷移時の受け取り用の変数
     var second: String!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // selfをデリゲートにする
-//        self.myLabel.delegate = self
-
-        // NSUserDefaultsを使った辞書データの格納=======================================================
-        // 何も無い状態をチェック
-        //        var myDefault = NSUserDefaults.standardUserDefaults()
-        //        if let readDict = myDefault.objectForKey("save") as? [String: String] {
-        //            let readData2 = readDict["だめだ"]!
-        //        } else {
-        //            //            println("No such Data")
-        //        }
-        // No such data!
         
         // データを用意して保存
         var saveData = ["いらっしゃいませ"/*key1*/: "おいでやす"/*data1*/, "だめだ": "あかん", "ありがとう": "おおきに", "ごはん": "まんま", "苦しい": "しんどい", "本当に": "ほんまに", "何": "なんやねん", "なにしてんの": "なにしてはんの", "じゃん": "やん", "マック": "マクド", "したよ": "したで", "いいね": "ええなあ", "どうしたの": "どうしたん", "しない": "せーへん"]
@@ -49,9 +32,6 @@ class ResultViewController: UIViewController , UITextViewDelegate {
         }
     }
     
-    
-    
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segue2") {
             // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
@@ -63,14 +43,9 @@ class ResultViewController: UIViewController , UITextViewDelegate {
         }
     }
 
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     
 }

@@ -25,9 +25,7 @@ class ExampleViewController: UIViewController,AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
+
         // データを用意して保存
         var saveData2 = ["おいでやす"/*key1*/:"ようこそいらっしゃいませ。"/*data1*/, "あかん": "もう私だめだ･･･", "おおきに": "6期iPhoneの皆さん今までありがとう！", "まんま": "このごはんおいしいですね。", "しんどい": "あなたのこと考えすぎて胸が苦しいよ。"]
         //saveData2の標準語だけを抜き出してkeyArray2に格納
@@ -40,39 +38,34 @@ class ExampleViewController: UIViewController,AVAudioPlayerDelegate {
         }
     
         // データを用意して保存
-        var saveData3 = ["おいでやす"/*key1*/:"ようこそおいでやす。"/*data1*/, "あかん": "もううちあかん･･･", "おおきに": "6期iPhoneのみんなおおきに！", "まんま": "このまんまおいしおすなあ。", "しんどい": "あたしな、あんたのこと考えすぎて胸がしんどいねん。"]
-        //saveData2の標準語だけを抜き出してkeyArray2に格納
+        var saveData3 = ["おいでやす"/*key1*/:"ようこそおいでやす。"/*data1*/, "あかん": "もううちあかん･･･", "おおきに": "6期iPhoneのみんなおおきに！", "まんま": "このまんまおいしおすなあ。", "しんどい": "うち、あんたのこと考えすぎて胸がしんどいねん。"]
+        //saveData3の標準語だけを抜き出してkeyArray3に格納
         var keyArray3 = Array(saveData3.keys)
-        //keyArray2の要素をhyoujyunWord2に入れてfor文を回す
+        //keyArray3の要素をhyoujyunWord3に入れてfor文を回す
         for hyoujyunWord3 in keyArray3 {
             if hyoujyunWord3 == self.example {
                 self.exampleLabel2.text = saveData3[hyoujyunWord3]
             }
         }
 
-        
-        
-
-        //再生する音源のURLを生成.
+        // 音声出力に関するコード======================================================
+        // 再生する音源のURLを生成.
         let soundFilePath : NSString = NSBundle.mainBundle().pathForResource(self.example, ofType: "mp3")!
         let fileURL : NSURL = NSURL(fileURLWithPath: soundFilePath as! String)!
         
-        //AVAudioPlayerのインスタンス化.
+        // AVAudioPlayerのインスタンス化.
         myAudioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
-        //AVAudioPlayerのデリゲートをセット.
+        // AVAudioPlayerのデリゲートをセット.
         myAudioPlayer.delegate = self
-        
-        
-        
     }
     
-    //ボタンがタップされた時に呼ばれるメソッド.
+    // ボタンがタップされた時に呼ばれるメソッド.
     @IBAction func onClickMyButton(sender: AnyObject) {
         
-        //playingプロパティがtrueであれば音源再生中.
+        // playingプロパティがtrueであれば音源再生中.
         if myAudioPlayer.playing == true {
             
-            //myAudioPlayerを一時停止.
+            // myAudioPlayerを一時停止.
             myAudioPlayer.pause()
 //            sender.setTitle("▶︎", forState: .Normal)
         } else {

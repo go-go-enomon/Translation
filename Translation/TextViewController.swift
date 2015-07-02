@@ -14,19 +14,13 @@ import UIKit
 // まず、デリゲートプロトコルを宣言
 class TextViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource{
     
-    
     var myUIPicker: UIPickerView!
     var myBox: UIView!
     var doneButton: UIButton!
-
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var selectButton: UIButton!
 
     // 表示する値の配列.
-    private let myValues: NSArray = ["いらっしゃいませ","だめだ","ありがとう","ごはん"]
-    
-    // テキストフィールドをアウトレット接続して
-//    var textField: UITextField!
+    private let myValues: NSArray = ["いいね","いらっしゃいませ","本当に","何","だめだ","ありがとう","ごはん", "苦しい"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,24 +55,17 @@ class TextViewController: UIViewController , UIPickerViewDelegate, UIPickerViewD
         
         // サイズを指定する.
         myUIPicker.frame = CGRectMake(0,0,self.view.bounds.width, 180.0)
-        
         // Delegateを設定する.
         myUIPicker.delegate = self
-        
         // DataSourceを設定する.
         myUIPicker.dataSource = self
-        
         // Viewに追加する.
         myBox.addSubview(myUIPicker)
-        
         doneButton = UIButton()
-        
         // サイズを設定する.
         doneButton.frame = CGRectMake(self.myBox.frame.width - 100,0,100,40)
-        
         // 背景色を設定する.
         doneButton.backgroundColor = UIColor.whiteColor()
-        
         // タイトルを設定する(通常時).
         doneButton.setTitle("Done", forState: UIControlState.Normal)
         doneButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
@@ -103,33 +90,20 @@ class TextViewController: UIViewController , UIPickerViewDelegate, UIPickerViewD
                 
         })
     }
-    
-    /*
-    pickerに表示する列数を返すデータソースメソッド.
-    (実装必須)
-    */
+    // pickerView=======================================================
+    // pickerに表示する列数を返すデータソースメソッド
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    /*
-    pickerに表示する行数を返すデータソースメソッド.
-    (実装必須)
-    */
+    // pickerに表示する行数を返すデータソースメソッド
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return myValues.count
     }
-    
-    /*
-    pickerに表示する値を返すデリゲートメソッド.
-    */
+    // pickerに表示する値を返すデリゲートメソッド
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String {
         return myValues[row] as! String
     }
-    
-    /*
-    pickerが選択された際に呼ばれるデリゲートメソッド.
-    */
+    // pickerが選択された際に呼ばれるデリゲートメソッド
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         println("row: \(row)")
         println("value: \(myValues[row])")
@@ -137,17 +111,12 @@ class TextViewController: UIViewController , UIPickerViewDelegate, UIPickerViewD
         self.selectButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
     }
     
-    
-    
     // segueによる受け渡し=======================================================
-    /*
-    画面遷移ボタン
-    */@IBAction func myButton(sender: AnyObject) {
+    //画面遷移ボタン
+    @IBAction func myButton(sender: AnyObject) {
         performSegueWithIdentifier("segue",sender: nil)
     }
-    /**
-    画面遷移時に値を遷移先に渡す
-    */
+    //画面遷移時に値を遷移先に渡す
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segue") {
             // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
