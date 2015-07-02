@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F13987CA1B45594C00FB5E27 /* おいでやす.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F13987C91B45594C00FB5E27 /* おいでやす.mp3 */; };
+		F13987CC1B4559A200FB5E27 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13987CB1B4559A200FB5E27 /* AVFoundation.framework */; };
 		F1A814B91B32ABEF0079AA97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A814B81B32ABEF0079AA97 /* AppDelegate.swift */; };
 		F1A814BB1B32ABEF0079AA97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A814BA1B32ABEF0079AA97 /* ViewController.swift */; };
 		F1A814BE1B32ABEF0079AA97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A814BC1B32ABEF0079AA97 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F13987C91B45594C00FB5E27 /* おいでやす.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "おいでやす.mp3"; sourceTree = "<group>"; };
+		F13987CB1B4559A200FB5E27 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F1A814B31B32ABEF0079AA97 /* Translation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A814B71B32ABEF0079AA97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A814B81B32ABEF0079AA97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F13987CC1B4559A200FB5E27 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F13987C81B45593000FB5E27 /* voice */ = {
+			isa = PBXGroup;
+			children = (
+				F13987C91B45594C00FB5E27 /* おいでやす.mp3 */,
+			);
+			name = voice;
+			sourceTree = "<group>";
+		};
 		F1A814AA1B32ABEF0079AA97 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +132,7 @@
 				F1A814EC1B32C9420079AA97 /* start.png */,
 				F1A814E81B32C6680079AA97 /* AppStart.png */,
 				F1A814DC1B32B5DD0079AA97 /* Kyoto.jpg */,
+				F13987C81B45593000FB5E27 /* voice */,
 				F1A814B81B32ABEF0079AA97 /* AppDelegate.swift */,
 				F1A814BA1B32ABEF0079AA97 /* ViewController.swift */,
 				F1A814E41B32BF690079AA97 /* TextViewController.swift */,
@@ -127,6 +141,7 @@
 				F1A814BC1B32ABEF0079AA97 /* Main.storyboard */,
 				F1A814BF1B32ABEF0079AA97 /* Images.xcassets */,
 				F1A814C11B32ABEF0079AA97 /* LaunchScreen.xib */,
+				F13987CB1B4559A200FB5E27 /* AVFoundation.framework */,
 				F1A814B61B32ABEF0079AA97 /* Supporting Files */,
 			);
 			path = Translation;
@@ -239,6 +254,7 @@
 			files = (
 				F1A814BE1B32ABEF0079AA97 /* Main.storyboard in Resources */,
 				F1A814E91B32C6680079AA97 /* AppStart.png in Resources */,
+				F13987CA1B45594C00FB5E27 /* おいでやす.mp3 in Resources */,
 				F1A814C31B32ABEF0079AA97 /* LaunchScreen.xib in Resources */,
 				F1A8150D1B344D7D0079AA97 /* title5.png in Resources */,
 				F1A815071B344B620079AA97 /* title2.png in Resources */,

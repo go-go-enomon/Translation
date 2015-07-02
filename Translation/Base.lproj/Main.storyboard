@@ -62,13 +62,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMC-qH-xt7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ここに標準語を入力してください" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I6Q-se-cyB">
-                                        <rect key="frame" x="29" y="403" width="261" height="30"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQS-Nu-frM">
                                         <rect key="frame" x="71" y="472" width="150" height="50"/>
                                         <state key="normal" title="Button" image="title2.png">
@@ -77,6 +70,17 @@
                                         <connections>
                                             <action selector="myButton:" destination="oXW-4Q-0Ja" eventType="touchUpInside" id="gfs-PI-Fjs"/>
                                             <segue destination="5tO-gy-gHe" kind="modal" identifier="segue" id="zpp-47-tHg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ4-sx-tnn">
+                                        <rect key="frame" x="30" y="400" width="261" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="選択してください">
+                                            <color key="titleColor" red="0.69660073138297873" green="0.69660073138297873" blue="0.69660073138297873" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="popupPickerView:" destination="oXW-4Q-0Ja" eventType="touchUpInside" id="XsD-49-lII"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -90,8 +94,7 @@
                     <navigationItem key="navigationItem" id="bce-My-Z3C"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="scvBackGround" destination="wMC-qH-xt7" id="Wfr-sb-hxh"/>
-                        <outlet property="textField" destination="I6Q-se-cyB" id="zF6-bX-KYZ"/>
+                        <outlet property="selectButton" destination="oJ4-sx-tnn" id="oZb-Gz-VJb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAD-lT-YjZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,6 +227,15 @@
                                 </state>
                                 <connections>
                                     <segue destination="oXW-4Q-0Ja" kind="show" id="FYX-Sj-mk3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieD-OX-BYH">
+                                <rect key="frame" x="128" y="432" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickMyButton:" destination="h2m-b6-GA9" eventType="touchUpInside" id="20j-nc-6iC"/>
                                 </connections>
                             </button>
                         </subviews>

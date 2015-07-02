@@ -7,10 +7,11 @@
 //
 
 import Foundation
-
 import UIKit
+import AVFoundation
 
-class ExampleViewController: UIViewController {
+
+class ExampleViewController: UIViewController,AVAudioPlayerDelegate {
     
     
     /// ラベルをアウトプット接続
@@ -18,9 +19,9 @@ class ExampleViewController: UIViewController {
     @IBOutlet weak var exampleLabel2: UILabel!
     /// 遷移時の受け取り用の変数
     var example: String!
+    var myAudioPlayer : AVAudioPlayer!
     
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class ExampleViewController: UIViewController {
         }
     
         // データを用意して保存
-        var saveData3 = ["おいでやす"/*key1*/:"ようこそおいでやす。"/*data1*/, "あかん": "もううちあかん･･･", "おおきに": "6期iPhoneのみんなおおきに！", "まんま": "このまんまおいしおすなあ。", "しんどい": "うち、あんたのこと考えすぎて胸がしんどいねん。"]
+        var saveData3 = ["おいでやす"/*key1*/:"ようこそおいでやす。"/*data1*/, "あかん": "もううちあかん･･･", "おおきに": "6期iPhoneのみんなおおきに！", "まんま": "このまんまおいしおすなあ。", "しんどい": "あたしな、あんたのこと考えすぎて胸がしんどいねん。"]
         //saveData2の標準語だけを抜き出してkeyArray2に格納
         var keyArray3 = Array(saveData3.keys)
         //keyArray2の要素をhyoujyunWord2に入れてfor文を回す
@@ -51,11 +52,35 @@ class ExampleViewController: UIViewController {
 
         
         
+
+        //再生する音源のURLを生成.
+        let soundFilePath : NSString = NSBundle.mainBundle().pathForResource(self.example, ofType: "mp3")!
+        let fileURL : NSURL = NSURL(fileURLWithPath: soundFilePath as! String)!
+        
+        //AVAudioPlayerのインスタンス化.
+        myAudioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
+        //AVAudioPlayerのデリゲートをセット.
+        myAudioPlayer.delegate = self
         
         
         
+    }
+    
+    //ボタンがタップされた時に呼ばれるメソッド.
+    @IBAction func onClickMyButton(sender: AnyObject) {
         
-        
+        //playingプロパティがtrueであれば音源再生中.
+        if myAudioPlayer.playing == true {
+            
+            //myAudioPlayerを一時停止.
+            myAudioPlayer.pause()
+//            sender.setTitle("▶︎", forState: .Normal)
+        } else {
+            
+            //myAudioPlayerの再生.
+            myAudioPlayer.play()
+//            sender.setTitle("■", forState: .Normal)
+        }
     }
     
     override func didReceiveMemoryWarning() {

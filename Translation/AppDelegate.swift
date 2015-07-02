@@ -15,8 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     
-    private var viewVal: String!
-    var ViewVal:String {
+    
+    
+    /* private var viewVal: Int = 5
+    var ViewVal:Int {
         get {
             return viewVal // 値を引き取る側に表示する値を返す。
         }
@@ -25,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-    
+    */
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

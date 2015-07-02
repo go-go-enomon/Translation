@@ -38,7 +38,7 @@ class ResultViewController: UIViewController , UITextViewDelegate {
         // No such data!
         
         // データを用意して保存
-        var saveData = ["いらっしゃいませ"/*key1*/: "おいでやす"/*data1*/, "だめだ": "あかん", "ありがとう": "おおきに", "ごはん": "まんま", "苦しい": "しんどい"]
+        var saveData = ["いらっしゃいませ"/*key1*/: "おいでやす"/*data1*/, "だめだ": "あかん", "ありがとう": "おおきに", "ごはん": "まんま", "苦しい": "しんどい", "本当に": "ほんまに", "何": "なんやねん", "なにしてんの": "なにしてはんの", "じゃん": "やん", "マック": "マクド", "したよ": "したで", "いいね": "ええなあ", "どうしたの": "どうしたん", "しない": "せーへん"]
         //saveDataの標準語だけを抜き出してkeyArrayに格納
         var keyArray = Array(saveData.keys)
         //keyArrayの要素をhyoujyunWordに入れてfor文を回す
